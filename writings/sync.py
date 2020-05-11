@@ -13,7 +13,7 @@ import tabulate
 IN_PATH = "/home/dev/writings"
 OUT_PATH = "/home/dev/projects/writings/posts"
 CONTENT_PATH = "/home/dev/projects/complex.codes/html/content/posts"
-GIST_REGEX = r'https:\/\/gist.githubusercontent.com\/[A-Za-z0-9]*\/[A-Za-z0-9]*\/raw\/[A-Za-z0-9]*\/[A-Za-z0-9]*\...'
+GIST_REGEX = r'https:\/\/gist.githubusercontent.com\/[A-Za-z0-9]*\/[A-Za-z0-9]*\/raw\/[A-Za-z0-9]*\/[A-Za-z0-9]*\..[a-z]+'
 
 def extract_path(raw_path):
     path = clean_raw_path(raw_path)
@@ -24,7 +24,7 @@ def extract_title(raw_path):
     return clean_raw_path(raw_path)
 
 def clean_raw_path(raw_path):
-    return raw_path.split("/")[-1].strip(".edited.docx")
+    return raw_path.split("/")[-1][:-12]
 
 def open_config(local_path, title=None):
     config_path = f"{local_path}/config.json"
@@ -32,7 +32,7 @@ def open_config(local_path, title=None):
     try:
         with open(config_path, "r") as f:
             config = json.loads(f.read())
-            print("Using existing configuration...")
+            # print("Using existing configuration...")
     except FileNotFoundError:
         print("No config found...")
     finally:
@@ -59,15 +59,16 @@ def mkdir(path):
         pass
 
 
-def main():
+def sync():
     print("Syncing writings...")
     writings = [["Header", "URL", "Updated"]]
+    subprocess.run(f"rm -r {CONTENT_PATH}".split())
     for raw_path in glob.glob(f"{IN_PATH}/*"):
         path = extract_path(raw_path)
         title = extract_title(raw_path)
         local_path = f"{OUT_PATH}/{path}"
         mkdir(local_path)
-        subprocess.run(["pandoc", "-s", raw_path, "-t", "markdown", "-o", f"{local_path}/raw.md"])
+        subprocess.run(["pandoc", "-s", raw_path, "-t", "markdown_github", "-o", f"{local_path}/raw.md"])
         config = open_config(local_path, title=title)
         writings.append([title, path, False])
 
@@ -79,7 +80,8 @@ def main():
             with open(f"{local_path}/raw.md") as inp:
                 for line in inp:
                     if re.search(GIST_REGEX, line): 
-                        match = re.search(GIST_REGEX, line).group(0)                        
+                        match = re.search(GIST_REGEX, line).group(0)       
+                        print(match)                 
                         code = requests.get(match).text
                         language = match.split(".")[-1]
                         f.write(f"```{language}\n")
@@ -87,7 +89,8 @@ def main():
                             f.write(line)
                         f.write(f"```\n")
                     else:
-                        f.write(line)
+                        f.write(line.replace("\\", ""))
+        
         content_path = f"{CONTENT_PATH}/{path}"
         mkdir(CONTENT_PATH)
         mkdir(content_path)

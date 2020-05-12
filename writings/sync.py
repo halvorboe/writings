@@ -12,7 +12,7 @@ import tabulate
 
 IN_PATH = "/home/dev/writings"
 OUT_PATH = "/home/dev/projects/writings/posts"
-CONTENT_PATH = "/home/dev/projects/complex.codes/html/content/posts"
+CONTENT_PATH = "/home/dev/projects/complex.codes/content/posts"
 GIST_REGEX = r'https:\/\/gist.githubusercontent.com\/[A-Za-z0-9]*\/[A-Za-z0-9]*\/raw\/[A-Za-z0-9]*\/[A-Za-z0-9]*\..[a-z]+'
 
 def extract_path(raw_path):
@@ -87,7 +87,7 @@ def sync():
                         f.write(f"```{language}\n")
                         for line in code:
                             f.write(line)
-                        f.write(f"```\n")
+                        f.write(f"\n```\n")
                     else:
                         f.write(line.replace("\\", ""))
         

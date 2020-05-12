@@ -1,8 +1,8 @@
 ---
 title: "TL;DR - Google Cloud Bigtable"
-date: "2020-05-09T18:56:33.632541"
+date: "2020-05-11T17:25:45.324575"
 description: ""
-views: 571
+views: 460
 draft: false
 ---
 Bigtable is a distributed storage system developed internally by Google to handle petabyte-scale applications - like Google Maps and Google Analytics. In 2015 Bigtable was launched as a public service on Google Cloud.
@@ -24,7 +24,8 @@ For example, consider the example of storing a marketing event in Bigtable. The 
   "id": "15d1369c-934e-11ea-bb37-0242ac130002",
   "timestamp": 1000,
   "url": "https://www.example.com/about"
-}```
+}
+```
 
 There are three types of data here:
 

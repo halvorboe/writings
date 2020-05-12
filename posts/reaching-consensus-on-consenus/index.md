@@ -1,8 +1,8 @@
 ---
 title: "Reaching Consensus on Consenus"
-date: "2020-05-09T17:56:55.048058"
+date: "2020-05-02T17:25:45.293629"
 description: ""
-views: 400
+views: 273
 draft: false
 ---
 Imagine you are a general trying to coordinate an attack together with another friendly general. The only way to win the battle is if both attack at the same time. Both of you have a radio transmitter that can transmit and receive morse code. The transmitter runs of battery, so you cannot keep it on all the time. How do you coordinate the attack?

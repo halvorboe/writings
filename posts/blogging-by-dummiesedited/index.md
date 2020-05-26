@@ -1,9 +1,8 @@
 ---
-title: "Blogging by dummies"
-date: "2020-01-12T17:25:45.460855"
+title: "Blogging by dummies.edited"
+date: "2020-05-26T11:52:22.206732"
 description: ""
-views: 72
-draft: false
+views: 628
 ---
 A handful of times in the last five years, I&#39;ve tried to start a
 blog - and then consecutively failed. With this blog, that trend is

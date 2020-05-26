@@ -1,9 +1,8 @@
 ---
-title: "TL;DR - Google Cloud Bigtable"
-date: "2020-05-11T17:25:45.324575"
+title: "TL_DR - Google Cloud Bigtable.edited.docx"
+date: "2020-05-26T11:51:23.466425"
 description: ""
-views: 460
-draft: false
+views: 683
 ---
 Bigtable is a distributed storage system developed internally by Google
 to handle petabyte-scale applications - like Google Maps and Google

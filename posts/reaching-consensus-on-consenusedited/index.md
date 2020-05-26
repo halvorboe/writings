@@ -1,9 +1,8 @@
 ---
-title: "Reaching Consensus on Consenus"
-date: "2020-05-02T17:25:45.293629"
+title: "Reaching Consensus on Consenus.edited"
+date: "2020-05-26T11:52:22.150140"
 description: ""
-views: 273
-draft: false
+views: 28
 ---
 Imagine you are a general trying to coordinate an attack together with
 another friendly general. The only way to win the battle is if both

@@ -1,9 +1,8 @@
 ---
-title: "Gallop An analytics database written in Rust"
-date: "2020-04-27T17:25:45.499386"
+title: "Gallop An analytics database written in Rust.edited"
+date: "2020-05-26T11:52:22.456743"
 description: ""
-views: 101
-draft: false
+views: 210
 ---
 Collecting information about the people visiting your site is crucial -
 if you want to know who is visiting your site. In the case of this blog,

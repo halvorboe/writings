@@ -6,10 +6,20 @@ verify_ssl = true
 [dev-packages]
 pylint = "*"
 pytest = "*"
+black = "*"
 
 [packages]
 tabulate = "*"
 requests = "*"
+logzero = "*"
+google-api-python-client = "*"
+google-auth-httplib2 = "*"
+google-auth-oauthlib = "*"
 
 [requires]
 python_version = "3.8"
+
+
+[pipenv]
+
+allow_prereleases = true

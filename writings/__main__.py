@@ -1,3 +1,3 @@
-from writings import sync 
+from writings import sync
 
-sync.sync()
+sync.main()

@@ -1,29 +1,55 @@
 ---
 title: "Blogging by dummies"
-date: "2020-01-12T17:25:45.460855"
+date: "2020-06-02T15:01:08.990690"
 description: ""
-views: 72
-draft: false
+views: 919
 ---
-A handful of times in the last five years, I&#39;ve tried to start a
-blog - and then consecutively failed. With this blog, that trend is
-going to change. At least that&#39;s the plan.
+A handful of times in the last five years I’ve tried to start a blog.
+Every single time I have face planted after the initial phase of setting
+up the blog. The hope is to change that trend with this attempt.
 
-You might have been in the same circle as me before. A sudden spurt of
-inspiration makes you start a blog. The first week is perfect, and
-everything is on the up-and-up. Then real life hits, and you realize
-that you don&#39;t have the time to blog.
+You might have been in the same situation before. A sudden spurt of
+inspiration makes you start a project that will take a lot of effort
+consistently. Usually, for me at least, everything is going well for
+about a week. After a week of everything being on the up-and-up real
+life hits. When real life hits you realize you never had time for the
+project, to begin with.
 
-That is the circle I&#39;m trying to break out of. And from my
-experience, the best way to break out of a repeating pattern is to not
-repeat the pattern. A post-mortem is a technique for that, so...
+Anyways, that probably be repeated with this attempt. If you are reading
+this that is a good sign - at least the server is still running.
+Increasing my chances even further is the fact that I’ll do a
+post-mortem below. Post-mortems have shown to drastically reduce the
+chances of repeated failures, I think...
 
-## Why did I fail before?
+## **Why did I fail before? **
 
-Implementing new habits is scientifically proven to be hard. For
-example, the leading cause of death in the world right now is obesity.
-Obesity can be changed with two simple habits - eating healthy meals and
-exercising. Still, people are obese.
+### **Implementing habits**
+
+Implementing new habits is significantly proven to be hard.
+
+Looking at the rate at which new year's resolutions fail - 8 out out 10
+- gives a decent picture of how hard it is. Most new year resolutions
+will be pretty simple in theory - like meditating every day or stop
+smoking. At the same time habits do not stick.
+
+Another example would be the leading cause of death in the world right
+now - obesity. If changing habits were easy it would not be a problem.
+People would just start eating healthy and exercising. At the same time,
+anyone who has ever been overweight knows that it is not that simple.
+Changing is hard.
+
+The main reason why changing is hard is that you have to “manually”
+change the habit for about 3 weeks before it becomes automatic.
+
+Going back to me the problem has been that I’ve never been able to stick
+to the habit long enough for blogging to feel natural. That is why I
+have committed to publishing an article every week. No matter how bad.
+
+Reading up on sticking to habits, committing publicly seems to be
+positively correlated with success. That brings me over to my next
+point...
+
+### **Getting feedback**
 
 The problem with implementing new habits is that you have to stick to
 them for about a month _manually_ before they become _automatic_.
@@ -185,3 +211,7 @@ There are three main reasons:
 
 Thank you for reading. If you have any questions, feel free to contact
 me at _hfb@complex.codes_.
+
+[<span class="underline">https://jamesclear.com/habits-fail</span>](https://jamesclear.com/habits-fail)
+
+[<span class="underline">https://www.psychologytoday.com/us/articles/199702/body-image-in-america-survey-results</span>](https://www.psychologytoday.com/us/articles/199702/body-image-in-america-survey-results)

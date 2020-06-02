@@ -8,13 +8,15 @@ from datetime import datetime
 import re
 from pprint import pprint
 import requests
+import bs4
 
 import tabulate
 from logzero import logger
 
-IN_PATH = "/home/hfb/writings/inputs"
-OUT_PATH = "/home/hfb/writings/posts"
-CONTENT_PATH = "/home/hfb/complex.codes/content/posts"
+DOC_PATH = "/home/halvor/writings/doc_links.txt"
+IN_PATH = "/home/halvor/writings/inputs"
+OUT_PATH = "/home/halvor/writings/posts"
+CONTENT_PATH = "/home/halvor/complex.codes/content/posts"
 GIST_REGEX = r"https:\/\/gist.githubusercontent.com\/[A-Za-z0-9]*\/[A-Za-z0-9]*\/raw\/[A-Za-z0-9]*\/[A-Za-z0-9]*\..[a-z]+"
 
 
@@ -118,6 +120,15 @@ def sync():
     print(tabulate.tabulate(writings, headers="firstrow"))
 
 def main():
+    with open(DOC_PATH) as f:
+        for line in f:
+            identifier = line.split("/")[-2]
+            doc = requests.get("https://docs.google.com/document/export?format=docx&id=" + identifier)
+            r = requests.get(line)
+            soup = bs4.BeautifulSoup(r.text, "html.parser")
+            name = "-".join(soup.title.get_text().split("-")[:-1]).strip()
+            with open("inputs/" + name + ".docx", "wb+") as output:
+                output.write(doc.content)
     sync()
 
 

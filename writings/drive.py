@@ -63,3 +63,8 @@ def main():
             while done is False:
                 status, done = downloader.next_chunk()
                 print("Download %d%%." % int(status.progress() * 100))
+
+
+if __name__ == "__main__":
+    main()
+
